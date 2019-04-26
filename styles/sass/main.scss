@@ -1,0 +1,91 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+ @import "bootstrap/functions";
+ @import "bootstrap/variables";
+ @import "bootstrap/mixins";
+ @import "bootstrap/root";
+ @import "bootstrap/reboot";
+ @import "bootstrap/type";
+ @import "bootstrap/images";
+ @import "bootstrap/code";
+ @import "bootstrap/grid";
+ @import "bootstrap/tables";
+ @import "bootstrap/forms";
+ @import "bootstrap/buttons";
+ @import "bootstrap/transitions";
+ @import "bootstrap/dropdown";
+ @import "bootstrap/button-group";
+ @import "bootstrap/input-group";
+ @import "bootstrap/custom-forms";
+ @import "bootstrap/nav";
+ @import "bootstrap/navbar";
+ @import "bootstrap/card";
+ @import "bootstrap/breadcrumb";
+ @import "bootstrap/pagination";
+ @import "bootstrap/badge";
+ @import "bootstrap/jumbotron";
+ @import "bootstrap/alert";
+ @import "bootstrap/progress";
+ @import "bootstrap/media";
+ @import "bootstrap/list-group";
+ @import "bootstrap/close";
+ @import "bootstrap/toasts";
+ @import "bootstrap/modal";
+ @import "bootstrap/tooltip";
+ @import "bootstrap/popover";
+ @import "bootstrap/carousel";
+ @import "bootstrap/spinners";
+ @import "bootstrap/utilities";
+ @import "bootstrap/print";
+
+ /* 
+ *      Custom styles
+ */
+ .wrapper {
+     max-width: 768px;
+     margin-left: auto;
+     margin-right: auto;
+     .row {
+        margin-left: 0;
+        margin-right: 0;
+     }
+ }
+ .button {
+     border: 1px solid black;
+     padding: 40px 101px;
+     font-size: 1.6875rem; //27px
+     //line-height: 3.789rem; //60.63px;
+     line-height: 1.6875rem;
+     letter-spacing: 1.8px;
+     display: inline-block;
+    
+    color: #000;
+    &:hover, 
+    &:focus {
+        color: #000;
+        text-decoration: none;    
+    }
+    @media (min-width: 768px) {
+        font-size: 14px;
+        line-height: 14px;
+
+        padding: 21px 45px 21px 58px;
+        letter-spacing: 1.3px;
+    }
+ }
+ @import 'fonts';
+ @import 'widget';
+ @import "header";
+ @import "footer";
+ @import "index";
+ @import "blog";
+ @import "work";
+ @import "project";
+ @import "about";
+ @import "contact";
+

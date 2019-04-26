@@ -1,0 +1,108 @@
+.contact {
+    .wrapper {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .header {
+        padding: 108px 0 150px;
+
+    }
+    .adress{
+        background-color: #d3b000;
+        padding: 60px 0 107px 58px;       
+        h4::before {
+            content: "";
+            margin-bottom: 75px;            
+            display: block;
+            width: 56px;
+            border-top: 7px solid #fff;
+        }
+    }
+    .img {
+        background: url('../img/contact-img.jpg') no-repeat center -65px;
+        background-size: cover;
+
+        height: 373px;
+        width: 100%;
+        //overflow: hidden;
+    }
+    .text {
+        background-color: #f9f9f9;
+        padding: 60px 87px 53px;
+    }
+    .phone {
+        background-color: #212121;
+        border-top: 3px solid #8e8e8e;
+        padding: 100px 58px 52px;
+        ul {
+            padding: 0;
+        }
+        ul::before {
+            content: "";
+            margin-bottom: 75px;            
+            display: block;
+            width: 56px;
+            border-top: 6px solid #fff;
+        }
+    }
+    .box-button {
+        padding: 150px 0;
+    }
+
+
+
+    @media (min-width: 768px) {
+        .wrapper {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header {
+            padding: 125px 0 70px;
+        }
+        .adress{
+            padding: 33px 29px 107px ;
+            h4::before {
+                margin-bottom: 39px;            
+                width: 31px;
+                border-top: 3px solid #fff;
+            }    
+            min-height: 300px;
+        }
+        .img {
+            height: 300px;
+            min-width: 100%;
+            background-position: center top;
+        }
+        .text {
+            margin-left: 0.25rem;
+            padding: 43px;
+            max-height: 350px;
+            overflow: hidden;
+        }
+        .phone {
+            margin-right: 0.25rem;
+            border-top: none;
+            padding: 33px 32px 201px;
+            overflow: hidden;
+            max-height: 350px;
+            ul {
+                padding: 0;
+                li {
+                    h4 {
+                        line-height: 28px;
+                    }
+                }
+            }
+            ul::before {
+                content: "";
+                margin-bottom: 41px;            
+                width: 31px;
+                border-top: 3px solid #fff;
+            }
+        }
+        .box-button {
+            padding: 77px 0 85px;
+        }
+
+    }
+}

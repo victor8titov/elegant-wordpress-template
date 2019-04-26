@@ -1,0 +1,451 @@
+@font-face {
+    font-family: "OpenSans Bold";
+    src: url("../fonts/OpenSans-Bold.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-Bold.woff") format("woff"), 
+      url("../fonts/OpenSans-Bold.ttf") format("truetype"), 
+      url("../fonts/OpenSans-Bold.svg#Open Sans") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans BoldItalic";
+    src: url("../fonts/OpenSans-BoldItalic.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-BoldItalic.woff") format("woff"), 
+      url("../fonts/OpenSans-BoldItalic.ttf") format("truetype"), 
+      url("../fonts/OpenSans-BoldItalic.svg#Open Sans") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans ExtraBold";
+    src: url("../fonts/OpenSans-ExtraBold.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-ExtraBold.woff") format("woff"), 
+      url("../fonts/OpenSans-ExtraBold.ttf") format("truetype"), 
+      url("../fonts/OpenSans-ExtraBold.svg#Open Sans ExtraBold") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans ExtraBoldItalic";
+    src: url("../fonts/OpenSans-ExtraBoldItalic.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff"), 
+      url("../fonts/OpenSans-ExtraBoldItalic.ttf") format("truetype"), 
+      url("../fonts/OpenSans-ExtraBoldItalic.svg#Open Sans ExtraBold") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans Italic";
+    src: url("../fonts/OpenSans-Italic.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-Italic.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-Italic.woff") format("woff"), 
+      url("../fonts/OpenSans-Italic.ttf") format("truetype"), 
+      url("../fonts/OpenSans-Italic.svg#Open Sans") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans Light";
+    src: url("../fonts/OpenSans-Light.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-Light.woff") format("woff"), 
+      url("../fonts/OpenSans-Light.ttf") format("truetype"), 
+      url("../fonts/OpenSans-Light.svg#Open Sans Light") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans LightItalic";
+    src: url("../fonts/OpenSans-LightItalic.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-LightItalic.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-LightItalic.woff") format("woff"), 
+      url("../fonts/OpenSans-LightItalic.ttf") format("truetype"), 
+      url("../fonts/OpenSans-LightItalic.svg#Open Sans Light") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSans-Regular.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-Regular.woff") format("woff"), 
+      url("../fonts/OpenSans-Regular.ttf") format("truetype"), 
+      url("../fonts/OpenSans-Regular.svg#Open Sans") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans SemiBold";
+    src: url("../fonts/OpenSans-SemiBold.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-SemiBold.woff") format("woff"), 
+      url("../fonts/OpenSans-SemiBold.ttf") format("truetype"), 
+      url("../fonts/OpenSans-SemiBold.svg#Open Sans SemiBold") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans SemiBold Italic";
+    src: url("../fonts/OpenSans-SemiBoldItalic.eot");
+    /* IE9 */
+    src: url("../fonts/OpenSans-SemiBoldItalic.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff"), 
+      url("../fonts/OpenSans-SemiBoldItalic.ttf") format("truetype"), 
+      url("../fonts/OpenSans-SemiBoldItalic.svg#Open Sans SemiBold") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Cardo Regular";
+    src: url("../fonts/Cardo-Regular.eot");
+    /* IE9 */
+    src: url("../fonts/Cardo-Regular.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/Cardo-Regular.woff") format("woff"), 
+      url("../fonts/Cardo-Regular.ttf") format("truetype"), 
+      url("../fonts/Cardo-Regular.svg#Cardo") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  /*  
+*   FOTNS
+*/
+/*
+    OpenSans Light
+    OpenSansLight Italic
+    OpenSans Semibold
+    Opensans Bold
+
+  --- h1  ---
+header > h1     'opesans light/opensanslight italic' 
+                80/60 50 #fff
+
+                
+header > menu   'OpenSans Semibold'
+                16/60 60 #fff
+
+body > h2       'opensans semibold'
+                44/60 50 #021725
+body>bigbox>h2  #505d68
+                
+body > h3       'opensans semibols'
+                13/60 50 #d4af37
+                uppercase
+body>map>h3     #505d68
+
+body > h4       'opensans'
+                21/60 50 #021725
+body>bigbox>h4  30/60 #505d68
+
+h5 >            'opensans'
+                13/60 50 #505d68
+
+body > p        'opensans light'
+                18/32 50 #021725
+body>box>p      13/23 
+body>bigbox>p   16/24,7 #505d68
+body>map>p      19/34 #505d68
+footer>p        16/34 #505d68
+
+body > button   'opensans light
+                14/32 50 #021725
+*/
+/*
+*           COLOR
+*/
+$black-light:       #021725;
+$black-lite-light:  #505d68;
+$gray:              #82888c;
+$orange:            #d4af37;
+
+
+    h1, p, .button, a {
+        font-family: 'OpenSans Light', sans-serif;
+    }
+    nav, h2, h3 {
+        font-family: 'OpenSans SemiBold', sans-serif;
+    }
+    h4,h5 {
+        font-family: 'OpenSans', sans-serif;
+    }
+    h1,h2,h3,h4,h5,p {
+        //line-height: 3.75rem; // 60px;
+        //letter-spacing: 3.125rem; //50px;
+    }
+    h1 {
+        font-size: 5rem; //80px;
+        line-height: 5rem;
+    }
+    h2 {
+        font-size: 2.75rem; //44px;
+        color: $black-light;
+    }
+    h3 {
+        font-size: 0.8125rem; //13px;
+        color: $orange;
+        text-transform: uppercase;
+    }
+    h4 {
+        font-size: 1.3125rem; //21px;
+        color: $black-light;
+    }
+    h5 {
+        font-size: 0.8125rem; //13px
+        color:$black-lite-light;
+    }
+    p {
+        color: $black-light;
+    }
+    .about .content p {
+        font-size: 1.125rem; // 18px;
+        line-height: 1.875rem;// 30px;
+        color: $gray;
+    }
+    a {
+        font-size: 0.875rem; //14
+        line-height: 2rem; //32px
+        color: $black-light;
+    }
+
+
+.color-light {
+    color: $black-lite-light;
+}
+.italic {
+    font-family: 'OpenSans LightItalic',sans-serif;
+}
+header {
+    color: #fff;    
+}
+.about .services {
+  h2, p, li {
+    color: $black-lite-light;
+  }
+  h2 {
+      font-size: 2.1875rem; //35px;
+      margin-bottom: 6.875vw;
+      margin-top: 3.4375vw;
+  } 
+  p,li {
+      font-size: 0.875rem; //14
+  }
+  p {
+      line-height: 1.75rem; //28
+      padding-left: 10px;
+  }
+  @media (max-width: 768px ) {
+      p {
+          font-size: 1.9375rem; //31px
+          line-height: 3.5625rem; //57px
+      }
+      h2 {
+          font-size: 85px;//85
+          line-height: 114px;//114
+          margin: 82px 0 167px;
+      }
+      li {
+          font-size: 34px;
+          line-height: 57px;
+      }
+  }
+}
+
+
+@media (max-width: 768px ){
+  h2 {
+    font-size: 3.9375rem; //60px;
+    line-height: 3.875rem; //62px
+    color: $gray;
+    margin-bottom: 5rem; // 80
+  }
+  h3 {
+      font-size: 1.75rem; //28px;
+      line-height: 3.75rem; //60
+  }
+  h4 {
+
+  }
+  h5 {
+  }
+  p {
+      font-size: 1.813rem; //29
+      line-height: 2.937rem; //47
+      color: $black-lite-light;
+  }
+  .about .content p {
+    font-size: 2.1875rem; //35px
+    line-height: 2.875rem; //46px
+  }
+  a {
+  }
+}
+
+
+.contact {
+  // mobile style
+  h2 {
+    font-size: 90px;
+    line-height: 92px;
+    margin-bottom: 0;
+  }
+  h3 {
+
+  }
+  h4 {
+    font-size: 2.859rem; //45.75
+    line-height: 3.66rem; //58,56
+    letter-spacing: -1px;
+    color: #fff;
+  }
+  p {
+    letter-spacing: 0.5px;
+  }
+
+  @media (min-width: 768px) {
+    // desktop style
+    h2 {
+      font-size: 44px; 
+      line-height: 60px;
+    }
+    h3 {
+      font-size: 13px;
+    }
+    h4 {
+      font-size: 25px;
+      line-height: 32px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}
+
+.blog {
+  h2 {
+    font-family: 'OpenSans Light', sans-serif;
+    font-size: 56px;
+    line-height: 94.24px;
+    letter-spacing: 1px;
+
+    margin-top: 36px;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-family: 'OpenSans Light', sans-serif;
+    font-size: 27px;
+    line-height: 83px;
+    text-transform: none;
+    margin-bottom: 30px;
+  }
+  p {
+    font-family: 'Cardo Regular', sans-serif;
+    font-size: 30px;
+    line-height: 47.2px;
+  }
+
+  @media (min-width:768px) {
+    h2 {
+      
+      font-size: 30px;
+      line-height: 66px;
+
+      margin-top: 11px;
+      margin-bottom: 0;
+    }
+    h3 {
+      
+      font-size: 15px;
+      line-height: 33px;
+      margin-bottom: 21px;
+
+    }
+    p {
+      
+      font-size: 16px;
+      line-height: 25px;
+
+    }
+  }
+}
+
+.widget-elegant {
+  
+  h2 {
+    font-family: 'OpenSans Light', sans-serif;
+    font-size: 42.96px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    //margin-top: 11px;
+    //margin-bottom: 0;
+    border-bottom: 6px solid $orange;
+    display: inline-block;
+    //width: 74vw;
+    width: 100%;
+    padding-bottom: 23px;
+    margin-top: 0;
+    margin-bottom: 57px;
+
+  }
+  a {
+    font-family: 'OpenSans LightItalic', sans-serif;
+    font-size: 29.89px;
+    line-height: 46.78px;
+    color: $black-light;
+    letter-spacing: 0.3px;
+    &:hover,
+    &:focus {
+      color: $black-light;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 23px;
+      line-height: 23px;
+      letter-spacing: 1px;
+     // width: 23.125vw;
+      padding-bottom: 16px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    a {
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0.1px;
+    }
+  }
+}

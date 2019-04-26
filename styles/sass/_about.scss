@@ -1,0 +1,36 @@
+.about {
+    
+    .content {
+        padding: 165px 0 157px;
+        text-align: center;
+    }
+    .services {
+        background-color: #f9f9f9;       
+        
+        .description, .list {
+            @media (max-width: 768px) {
+                padding: 0 10.666vw; 
+            }
+            
+        }
+        
+        .list {
+                list-style-type: none;
+                @media (max-width: 768px) {
+                    padding-top: 166px;
+                    padding-bottom: 88px;
+                    }
+                li {
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        left: - 18px;
+                        top: 50%;
+                        content: '';
+                        width: 6px;
+                        border-top: 1px solid $gray;
+                    }
+                }
+        }
+    }
+}
