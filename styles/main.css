@@ -7148,6 +7148,15 @@ a.text-dark:hover, a.text-dark:focus {
   font-style: normal;
   font-weight: normal; }
 
+@font-face {
+  font-family: "Cardo Bold";
+  src: url("../fonts/Cardo-Bold.eot");
+  /* IE9 */
+  src: url("../fonts/Cardo-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Cardo-Bold.woff") format("woff"), url("../fonts/Cardo-Bold.ttf") format("truetype"), url("../fonts/Cardo-Bold.svg#Cardo") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal; }
+
 /*  
 *   FOTNS
 */
@@ -7350,6 +7359,28 @@ header {
   .blog p {
     font-size: 16px;
     line-height: 25px; } }
+
+.project strong {
+  font-family: 'Cardo Bold', sans-serif; }
+
+.project h2 {
+  font-size: 95px;
+  margin-bottom: 100px; }
+
+.project p {
+  font-family: 'Cardo Regular', sans-serif;
+  font-size: 31px;
+  line-height: 66px;
+  letter-spacing: 1.5px; }
+
+@media (min-width: 768px) {
+  .project h2 {
+    font-size: 45px;
+    line-height: 32px;
+    margin-bottom: 120px; }
+  .project p {
+    font-size: 20px;
+    line-height: 32px; } }
 
 .widget-elegant h2 {
   font-family: 'OpenSans Light', sans-serif;
@@ -7645,6 +7676,49 @@ footer {
             min-width: 100%; } }
     .work .type-work .content {
       display: none; }
+
+.project {
+  margin: 147px 37px 32px; }
+  .project ul {
+    padding: 0;
+    list-style-type: none; }
+  .project .content {
+    max-width: 100%;
+    padding: 68px 15px 0;
+    background-color: #f9f9f9; }
+    .project .content .one-post .content-one-post ul {
+      margin-top: 150px; }
+    .project .content .one-post .content-one-post .box-img {
+      overflow: hidden;
+      width: 100%;
+      max-width: 750px;
+      margin-bottom: 33px; }
+      .project .content .one-post .content-one-post .box-img img {
+        min-width: 100%;
+        width: auto !important;
+        height: auto !important;
+        min-height: 100%; }
+  .project .sidebar .project-img {
+    width: 100%;
+    max-width: 750px;
+    overflow: hidden;
+    margin-bottom: 5px; }
+    .project .sidebar .project-img img {
+      width: auto !important;
+      height: auto !important;
+      min-width: 100%;
+      min-height: 100%; }
+  @media (min-width: 768px) {
+    .project {
+      margin: 84px 65px 72px; }
+      .project .content {
+        padding: 88px 65px 0; }
+        .project .content .one-post .content-one-post ul {
+          margin-top: 100px; }
+        .project .content .one-post .content-one-post .box-img {
+          margin-bottom: 20px; }
+      .project .social-box {
+        margin-top: 103px; } }
 
 .about .content {
   padding: 165px 0 157px;

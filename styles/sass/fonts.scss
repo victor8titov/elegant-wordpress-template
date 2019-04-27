@@ -140,6 +140,19 @@
     font-weight: normal;
   }
 
+  @font-face {
+    font-family: "Cardo Bold";
+    src: url("../fonts/Cardo-Bold.eot");
+    /* IE9 */
+    src: url("../fonts/Cardo-Bold.eot?#iefix") format("embedded-opentype"), 
+      url("../fonts/Cardo-Bold.woff") format("woff"), 
+      url("../fonts/Cardo-Bold.ttf") format("truetype"), 
+      url("../fonts/Cardo-Bold.svg#Cardo") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+  }
+
   /*  
 *   FOTNS
 */
@@ -398,6 +411,34 @@ header {
       font-size: 16px;
       line-height: 25px;
 
+    }
+  }
+}
+
+.project {
+  strong {
+    font-family: 'Cardo Bold', sans-serif;
+  }
+  h2 {
+    font-size: 95px;
+    margin-bottom: 100px;
+    
+  }
+  p {
+    font-family: 'Cardo Regular', sans-serif;
+    font-size: 31px;
+    line-height: 66px;
+    letter-spacing: 1.5px;
+  }
+  @media (min-width: 768px ) {
+    h2 {
+      font-size: 45px;
+      line-height: 32px;
+      margin-bottom: 120px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 32px;
     }
   }
 }

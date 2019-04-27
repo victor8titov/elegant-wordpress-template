@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Cardo";
+  src: url("../fonts/Cardo-Bold.eot");
+  /* IE9 */
+  src: url("../fonts/Cardo-Bold.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Cardo-Bold.woff") format("woff"), 
+    url("../fonts/Cardo-Bold.ttf") format("truetype"), 
+    url("../fonts/Cardo-Bold.svg#Cardo") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
