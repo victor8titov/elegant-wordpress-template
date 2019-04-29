@@ -7742,13 +7742,13 @@ footer {
     padding: 0 30px; }
     .main .about .button {
       margin-top: 46px; }
-  .main .work .head {
+  .main-work .head {
     margin-bottom: 159px; }
-  .main .work .post-work {
+  .main-work .post-work {
     width: 100%;
     margin-bottom: 5px;
     overflow: hidden; }
-    .main .work .post-work img {
+    .main-work .post-work img {
       width: auto !important;
       height: auto !important;
       min-width: 100%;
@@ -7814,14 +7814,14 @@ footer {
         padding: 0; }
         .main .about .button {
           margin-top: 25px; }
-      .main .work .head {
+      .main-work .head {
         margin-bottom: 78px; }
-      .main .work .post-work {
-        width: 24.84vw;
+      .main-work .post-work {
+        max-width: 317px;
         height: 23.44vw;
         margin-bottom: 5px;
         overflow: hidden; }
-        .main .work .post-work img {
+        .main-work .post-work img {
           width: auto !important;
           height: auto !important;
           min-width: 100%;

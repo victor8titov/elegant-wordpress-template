@@ -53,7 +53,7 @@ get_header();
     <?php 
         if ( get_post_meta( $id, 'work_show') ):
     ?>
-    <section class="work container-fluid">
+    <section class="main-work container-fluid">
         <div class="row text-center">
             <div class="col-12">
                 <div class="head">
@@ -61,8 +61,8 @@ get_header();
                     <h2>Show Your Amazing Work</h2>
                 </div>    
             </div>
-            <div class="col-12">
-                <div class="works d-flex flex-wrap justify-content-around">
+            <div class="col-12 p-0">
+                <div class="works d-flex flex-wrap justify-content-around ">
                     <?php
                         $myposts = get_posts( array(
                             'post_type' => 'work',

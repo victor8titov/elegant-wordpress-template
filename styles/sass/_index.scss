@@ -9,7 +9,7 @@
             margin-top: 46px;
         }
     }
-    .work {
+    &-work {
         .head {
             margin-bottom: 159px;
         }
@@ -117,12 +117,13 @@
                 margin-top: 25px;
             }
         }
-        .work {
+        &-work {
             .head {
                 margin-bottom: 78px;
             }
             .post-work {
-                width: 24.84vw;
+                //width: 24.84vw;
+                max-width: 317px;
                 height: 23.44vw;
                 //min-height: 564px;
                 margin-bottom: 5px;
