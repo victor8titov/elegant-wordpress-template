@@ -1,8 +1,13 @@
 
 .page-main {
-    background: url('../img/bg-main.jpg') no-repeat center center;
+    background: url('../img/bg-main-mb.jpg') no-repeat center center;
     //background: cover;
-    min-height: 700px;
+    min-height: 1336px;
+    
+    @media (min-width: 768px) {
+        background: url('../img/bg-main.jpg') no-repeat center top;
+        min-height: 700px;
+    }
 }
 .page-posts {
     @media (min-width: 768px) {
@@ -174,7 +179,8 @@ header {
         }
     }
     .masthead {
-        margin: 18% 0 24%;
+        margin-top: 347px;
+        //margin: 18% 0 24%;
     }
     .container {
 

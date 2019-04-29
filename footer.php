@@ -31,6 +31,12 @@
 
 <?php wp_footer(); ?>
 
+
+<?php if ( get_post_type() === 'page' && is_front_page()): ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmHUV8JIqLC9SdhjFrIfH2-vJ7uFZUixY&callback=initMap" async defer></script>
+<?php endif; ?>
+
+
 <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
 //]]></script>

@@ -68,6 +68,24 @@ function ele_get_post_types() {
                 'show_in_nav_menus'=> true,
             ),
         ),
+        'people' => array(
+            'singular' => 'People',   // название для одной записи этого типа   
+            'multiple' => 'Peoples',  // основное название для типа записи         
+            
+            'config' => array(
+                // все параметры в сноске *
+                'public' => true,
+                'menu_position' => 20,
+                'has_archive'   => true,
+                'supports'=> array(
+                    'title',
+                    'editor',
+                    'thumbnail',
+                    'custom-field',
+                ),
+                'show_in_nav_menus'=> true,
+            ),
+        ),
     );
 }
 
@@ -101,6 +119,298 @@ function ele_meta_boxes( $meta_boxes ) {
             
         )
     );
+    if( isset( $_GET['post'] ) ) $post_id = $_GET['post'];
+
+    elseif( isset( $_POST['post_ID'] ) ) $post_id = $_POST['post_ID'];
+
+    // Get current template
+    //  Пользуемся скрытыми метополями вордпресс
+    //  для каждой страницы шаблона есть метаполе с именем шаблона
+    //  скрыетое метополе _wp_page_template
+    $current_template = get_post_meta( $post_id, '_wp_page_template', true );
+    //  проверяем если шаблон не совпадает
+    if( $current_template  === "main.php" ): // действия если шаблон не совпадает
+    $meta_boxes[] = array(
+        'id'         => 'info',
+        'title'      => 'Additional date',
+        'post_types' => 'page',
+        'context'    => 'normal',
+        'priority'   => 'high',
+
+        'fields' => array(
+            /*          ABOUT US SECTION             */
+            /* ------------------------------------- */
+            array(
+                'type' => 'heading',
+                'name' => 'Section About US',
+                'desc' => '',
+            ),
+            array(
+                'id'        => 'about_show',
+                'name'      => 'Show / Hidden section?',
+                'type'      => 'switch',
+                
+                // Style: rounded (default) or square
+                'style'     => 'rounded',
+            
+                // On label: can be any HTML
+                'on_label'  => 'Show',
+            
+                // Off label
+                'off_label' => 'Hidden',
+            ),
+            array(
+                'name'        => 'Title',
+                'id'          => 'about_title',
+                'type'        => 'text',
+            
+                // Текст-подсказка внутри поля. Необязательный.
+                'placeholder' => 'Title section',
+            
+                // Размер. Необязательный.
+                //'size'        => 30,
+                            
+            ),
+            array(
+                'name'        => 'Text',
+                'id'          => 'about_text',
+                'type'        => 'textarea',
+            
+                // Эти параметры необязательные
+                'placeholder' => 'text ', // По умолчанию без placeholder
+                //'cols'        => 50, // По умолчанию 60
+                'rows'        => 5, // По умолчанию 4
+            ),
+            array(
+                'name'        => 'Link',
+                'id'          => 'about_link',
+                'type'        => 'text',
+            
+                // Текст-подсказка внутри поля. Необязательный.
+                'placeholder' => 'link for transition',
+            
+                // Размер. Необязательный.
+                //'size'        => 30,
+                            
+            ),
+
+
+
+            /*         WORK SECTION             */
+            /* ------------------------------------- */
+            array(
+                'type' => 'heading',
+                'name' => 'Section Work',
+                'desc' => '',
+            ),
+            array(
+                'id'        => 'work_show',
+                'name'      => 'Show / Hidden section?',
+                'type'      => 'switch',
+                
+                // Style: rounded (default) or square
+                'style'     => 'rounded',
+            
+                // On label: can be any HTML
+                'on_label'  => 'Show',
+            
+                // Off label
+                'off_label' => 'Hidden',
+            ),
+            /*         PEOPLE SECTION             */
+            /* ------------------------------------- */
+            array(
+                'type' => 'heading',
+                'name' => 'Section PEOPLE',
+                'desc' => '',
+            ),
+            array(
+                'id'        => 'people_show',
+                'name'      => 'Show / Hidden section?',
+                'type'      => 'switch',
+                
+                // Style: rounded (default) or square
+                'style'     => 'rounded',
+            
+                // On label: can be any HTML
+                'on_label'  => 'Show',
+            
+                // Off label
+                'off_label' => 'Hidden',
+            ),
+            array(
+                'name'        => 'Title',
+                'id'          => 'people_title',
+                'type'        => 'text',
+            
+                // Текст-подсказка внутри поля. Необязательный.
+                'placeholder' => 'Title section',
+            
+                // Размер. Необязательный.
+                //'size'        => 30,
+                            
+            ),
+            array(
+                'name'        => 'Text',
+                'id'          => 'people_text',
+                'type'        => 'textarea',
+            
+                // Эти параметры необязательные
+                'placeholder' => 'text ', // По умолчанию без placeholder
+                //'cols'        => 50, // По умолчанию 60
+                'rows'        => 5, // По умолчанию 4
+            ),
+
+            /*         LAST POST SECTION             */
+            /* ------------------------------------- */
+            array(
+                'type' => 'heading',
+                'name' => 'Section LAST POST',
+                'desc' => '',
+            ),
+            array(
+                'id'        => 'post_show',
+                'name'      => 'Show / Hidden section?',
+                'type'      => 'switch',
+                
+                // Style: rounded (default) or square
+                'style'     => 'rounded',
+            
+                // On label: can be any HTML
+                'on_label'  => 'Show',
+            
+                // Off label
+                'off_label' => 'Hidden',
+            ),
+            /*         CONTACT US SECTION             */
+            /* ------------------------------------- */
+            array(
+                'type' => 'heading',
+                'name' => 'Section Contact us',
+                'desc' => '',
+            ),
+            array(
+                'id'        => 'contact_show',
+                'name'      => 'Show / Hidden section?',
+                'type'      => 'switch',
+                
+                // Style: rounded (default) or square
+                'style'     => 'rounded',
+            
+                // On label: can be any HTML
+                'on_label'  => 'Show',
+            
+                // Off label
+                'off_label' => 'Hidden',
+            ),
+            array(
+                'name'        => 'LOCATION',
+                //'label_description' => 'Label description',
+                'id'          => 'contact_location',
+                'desc'        => 'Please enter adress',
+                'type'        => 'text',
+            
+                // Default value (optional)
+                // 'std'         => 'Default text value',
+            
+                // Cloneable (i.e. have multiple value)?
+                'clone'       => true,
+            
+                // Placeholder
+                'placeholder' => 'Enter adress',
+            
+                // Input size
+                //'size'        => 30,
+            
+                
+            ),
+            array(
+                'name'        => 'FAX',
+                //'label_description' => 'Label description',
+                'id'          => 'contact_fax',
+                'desc'        => 'Please enter phone',
+                'type'        => 'text',
+            
+                // Default value (optional)
+                // 'std'         => 'Default text value',
+            
+                // Cloneable (i.e. have multiple value)?
+                'clone'       => true,
+            
+                // Placeholder
+                'placeholder' => 'Enter phone',
+            
+                // Input size
+                //'size'        => 30,
+            ),
+            array(
+                'name'        => 'PHONE',
+                //'label_description' => 'Label description',
+                'id'          => 'contact_phone',
+                'desc'        => 'Please enter phone',
+                'type'        => 'text',
+            
+                // Default value (optional)
+                // 'std'         => 'Default text value',
+            
+                // Cloneable (i.e. have multiple value)?
+                'clone'       => true,
+            
+                // Placeholder
+                'placeholder' => 'Enter phone',
+            
+                // Input size
+                //'size'        => 30,
+            ),
+            array(
+                'name'        => 'EMAIL',
+                //'label_description' => 'Label description',
+                'id'          => 'contact_email',
+                'desc'        => 'Please enter phone',
+                'type'        => 'text',
+            
+                // Default value (optional)
+                // 'std'         => 'Default text value',
+            
+                // Cloneable (i.e. have multiple value)?
+                'clone'       => true,
+            
+                // Placeholder
+                'placeholder' => 'Enter Email',
+            
+                // Input size
+                //'size'        => 30,
+            ),
+        )
+    );
+    endif;
+
+    $meta_boxes[] = array(
+        'id'         => 'info',
+        'title'      => 'Additional date',
+        'post_types' => 'people',
+        'context'    => 'normal',
+        'priority'   => 'high',
+
+        'fields' => array(
+            array(
+                'type' => 'heading',
+                'name' => 'Optional Data',
+                'desc' => 'profession',
+            ),
+            array(
+                'name'          => 'Profession',
+                'id'            => 'people_prof',
+                'type'          => 'text',
+
+                'placeholder'   => 'Profession in company',
+            )
+
+           
+            
+        )
+    );
+            
 
     // Add more meta boxes if you want
     // $meta_boxes[] = ...

@@ -7299,6 +7299,115 @@ header {
     font-size: 2.1875rem;
     line-height: 2.875rem; } }
 
+h1 {
+  font-size: 95px;
+  line-height: 139px;
+  letter-spacing: 4px; }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 80px;
+    line-height: 60px; } }
+
+.main h2 {
+  font-size: 90px;
+  line-height: 92px;
+  margin-bottom: 3.5rem; }
+
+.main h3 {
+  font-size: 28px;
+  line-height: 60px; }
+
+.main h4 {
+  font-size: 40px;
+  line-height: 114px; }
+
+.main p {
+  font-size: 29px;
+  line-height: 52px; }
+
+.main .post-people h3 {
+  line-height: 28px;
+  margin-bottom: 33px; }
+
+.main .post-people h4 {
+  line-height: 40px;
+  margin-bottom: 48px; }
+
+.main .post-people p {
+  line-height: 43px; }
+
+.main .last-post h4 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 60px; }
+
+.main .last-post h5 {
+  font-size: 28px;
+  line-height: 28px;
+  margin-top: 80px;
+  margin-bottom: 30px; }
+
+.main .last-post p {
+  font-size: 29px;
+  line-height: 47px; }
+
+@media (min-width: 768px) {
+  .main h2 {
+    font-size: 44px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 32px; }
+  .main h3 {
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 9px; }
+  .main h4 {
+    font-size: 21px;
+    line-height: 60px; }
+  .main p {
+    font-size: 18px;
+    line-height: 32px; }
+  .main .post-people h3 {
+    margin-bottom: 0; }
+  .main .post-people h4 {
+    margin-bottom: 18px; }
+  .main .post-people p {
+    font-size: 13px;
+    line-height: 23px; } }
+
+.main .last-post h4 {
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 29px; }
+
+.main .last-post h5 {
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: 40px;
+  margin-bottom: 17px; }
+
+.main .last-post p {
+  font-size: 16px;
+  line-height: 25px; }
+
+.main .main-contact h4 {
+  font-size: 28px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 60px; }
+
+.main .main-contact h5 {
+  font-size: 20px;
+  line-height: 48px;
+  color: #82888c; }
+
+@media (min-width: 768px) {
+  .main .main-contact h4 {
+    font-size: 13px;
+    margin-bottom: 24px; } }
+
 .contact h2 {
   font-size: 90px;
   line-height: 92px;
@@ -7449,8 +7558,12 @@ header {
     height: 23vw; } }
 
 .page-main {
-  background: url("../img/bg-main.jpg") no-repeat center center;
-  min-height: 700px; }
+  background: url("../img/bg-main-mb.jpg") no-repeat center center;
+  min-height: 1336px; }
+  @media (min-width: 768px) {
+    .page-main {
+      background: url("../img/bg-main.jpg") no-repeat center top;
+      min-height: 700px; } }
 
 @media (min-width: 768px) {
   .page-posts {
@@ -7582,7 +7695,7 @@ header .header-menu {
           background: rgba(255, 255, 255, 0.8); }
 
 header .masthead {
-  margin: 18% 0 24%; }
+  margin-top: 347px; }
 
 @media (min-width: 576px) {
   header .container {
@@ -7620,6 +7733,153 @@ footer {
       font-size: 1.875rem;
       line-height: 3rem;
       color: #82888c; } }
+
+.main {
+  /* section last post mobile style */
+  /* SECTION CONTACT US */ }
+  .main .about {
+    margin: 134px 0 281px;
+    padding: 0 30px; }
+    .main .about .button {
+      margin-top: 46px; }
+  .main .work .head {
+    margin-bottom: 159px; }
+  .main .work .post-work {
+    width: 100%;
+    margin-bottom: 5px;
+    overflow: hidden; }
+    .main .work .post-work img {
+      width: auto !important;
+      height: auto !important;
+      min-width: 100%;
+      min-height: 100%; }
+  .main .team {
+    margin-top: 274px;
+    padding: 0 30px; }
+    .main .team .head {
+      margin-bottom: 93px; }
+    .main .team .peoples .post-people {
+      background-color: #f9f9f9;
+      margin-bottom: 71px;
+      padding-bottom: 71px;
+      overflow: hidden; }
+      .main .team .peoples .post-people h3, .main .team .peoples .post-people h4, .main .team .peoples .post-people p {
+        margin-left: 30px; }
+      .main .team .peoples .post-people img {
+        min-width: 100%;
+        min-height: 70.7vw;
+        margin-bottom: 34px; }
+  .main .last-post {
+    margin-top: 207px;
+    padding: 0 38px; }
+    .main .last-post-head {
+      margin-bottom: 93px; }
+    .main .last-post-body {
+      overflow: hidden;
+      background-color: #f9f9f9; }
+      .main .last-post-body h5, .main .last-post-body h4, .main .last-post-body p, .main .last-post-body a {
+        margin-left: 75px; }
+      .main .last-post-body img {
+        min-width: 100%;
+        min-height: 84vw;
+        height: auto;
+        width: auto; }
+      .main .last-post-body .button {
+        padding: 31px 86px;
+        margin-top: 76px;
+        margin-bottom: 83px; }
+    .main .last-post-footer {
+      padding-top: 78px; }
+  .main-contact {
+    background-color: #f9f9f9;
+    margin-top: 285px;
+    margin-left: 37px;
+    margin-right: 37px;
+    margin-bottom: 150px; }
+    .main-contact-head {
+      background-color: #fff;
+      padding-bottom: 34px; }
+    .main-contact-map {
+      margin-bottom: 85px; }
+      .main-contact-map #map {
+        height: 300px;
+        width: 100%; }
+    .main-contact-location, .main-contact-phone, .main-contact-fax, .main-contact-email {
+      padding-bottom: 150px; }
+  @media (min-width: 768px) {
+    .main {
+      /* SECTION CONTACT US desktop*/ }
+      .main .about {
+        margin: 78px 0 161px;
+        padding: 0; }
+        .main .about .button {
+          margin-top: 25px; }
+      .main .work .head {
+        margin-bottom: 78px; }
+      .main .work .post-work {
+        width: 24.84vw;
+        height: 23.44vw;
+        margin-bottom: 5px;
+        overflow: hidden; }
+        .main .work .post-work img {
+          width: auto !important;
+          height: auto !important;
+          min-width: 100%;
+          min-height: 100%; }
+      .main .team {
+        margin-top: 145px;
+        padding: 0; }
+        .main .team .head {
+          margin-bottom: 75px; }
+        .main .team .peoples .post-people {
+          background-color: #f9f9f9;
+          margin-bottom: 0px;
+          padding-bottom: 25px;
+          overflow: hidden; }
+          .main .team .peoples .post-people h3, .main .team .peoples .post-people h4, .main .team .peoples .post-people p {
+            margin-left: 22px; }
+          .main .team .peoples .post-people img {
+            min-width: 100%;
+            min-height: 15vw;
+            margin-bottom: 11px; }
+      .main .last-post {
+        margin-top: 164px;
+        padding: 0; }
+        .main .last-post-head {
+          margin-bottom: 38px; }
+        .main .last-post-body .text-post {
+          width: 50%;
+          float: right; }
+        .main .last-post-body h5, .main .last-post-body h4, .main .last-post-body p, .main .last-post-body a {
+          margin-left: 40px;
+          margin-right: 30px; }
+        .main .last-post-body img {
+          width: 384px;
+          min-width: auto;
+          min-height: auto;
+          height: auto; }
+        .main .last-post-body .button {
+          padding: 16px 43px;
+          margin-top: 36px;
+          margin-bottom: 60px; }
+        .main .last-post-footer {
+          padding-top: 84px; }
+      .main-contact {
+        background-color: #f9f9f9;
+        margin-top: 158px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 41px; }
+        .main-contact-head {
+          background-color: #fff;
+          padding-bottom: 11px; }
+        .main-contact-map {
+          margin-bottom: 38px; }
+          .main-contact-map #map {
+            height: 300px;
+            width: 100%; }
+        .main-contact-location, .main-contact-phone, .main-contact-fax, .main-contact-email {
+          padding-bottom: 40px; } }
 
 .blog > .container .content .post {
   background-color: #fff;
