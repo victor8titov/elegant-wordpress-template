@@ -63,12 +63,17 @@ $name_class = '';
 
 			<div class="col-1 col-md-2  p-0">
 				<!-- NAVIGATON -->
-				<nav id="site-navigation" class="header-menu">
-					<p>Menu</p>
+				<nav id="site-navigation" class="header-menu ">
+					<div class="menu-icon" id="menu-icon">
+						<div class="line-1" id="line-1"></div>
+						<div class="line-2" id="line-2"></div>
+						<div class="line-3" id="line-3"></div>
+					</div>
 					<?php
 					wp_nav_menu( array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
+						'theme_location' => 'header_menu',
+						'menu_id'        => 'header-menu',
+						'menu_class'	 => 'menu gradient-menu ',
 					) );
 					?>
 				</nav><!-- #site-navigation -->

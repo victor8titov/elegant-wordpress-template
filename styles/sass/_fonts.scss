@@ -153,49 +153,6 @@
     font-weight: normal;
   }
 
-  /*  
-*   FOTNS
-*/
-/*
-    OpenSans Light
-    OpenSansLight Italic
-    OpenSans Semibold
-    Opensans Bold
-
-  --- h1  ---
-header > h1     'opesans light/opensanslight italic' 
-                80/60 50 #fff
-
-                
-header > menu   'OpenSans Semibold'
-                16/60 60 #fff
-
-body > h2       'opensans semibold'
-                44/60 50 #021725
-body>bigbox>h2  #505d68
-                
-body > h3       'opensans semibols'
-                13/60 50 #d4af37
-                uppercase
-body>map>h3     #505d68
-
-body > h4       'opensans'
-                21/60 50 #021725
-body>bigbox>h4  30/60 #505d68
-
-h5 >            'opensans'
-                13/60 50 #505d68
-
-body > p        'opensans light'
-                18/32 50 #021725
-body>box>p      13/23 
-body>bigbox>p   16/24,7 #505d68
-body>map>p      19/34 #505d68
-footer>p        16/34 #505d68
-
-body > button   'opensans light
-                14/32 50 #021725
-*/
 /*
 *           COLOR
 */
@@ -205,53 +162,36 @@ $gray:              #82888c;
 $orange:            #d4af37;
 
 
-    h1, p, .button, a {
-        font-family: 'OpenSans Light', sans-serif;
-    }
-    nav, h2, h3 {
-        font-family: 'OpenSans SemiBold', sans-serif;
-    }
-    h4,h5 {
-        font-family: 'OpenSans', sans-serif;
-    }
-    h1,h2,h3,h4,h5,p {
-        //line-height: 3.75rem; // 60px;
-        //letter-spacing: 3.125rem; //50px;
-    }
-    h1 {
-        font-size: 5rem; //80px;
-        line-height: 5rem;
-    }
-    h2 {
-        font-size: 2.75rem; //44px;
-        color: $black-light;
-    }
-    h3 {
-        font-size: 0.8125rem; //13px;
-        color: $orange;
-        text-transform: uppercase;
-    }
-    h4 {
-        font-size: 1.3125rem; //21px;
-        color: $black-light;
-    }
-    h5 {
-        font-size: 0.8125rem; //13px
-        color:$black-lite-light;
-    }
-    p {
-        color: $black-light;
-    }
-    .about .content p {
-        font-size: 1.125rem; // 18px;
-        line-height: 1.875rem;// 30px;
-        color: $gray;
-    }
-    a {
-        font-size: 0.875rem; //14
-        line-height: 2rem; //32px
-        color: $black-light;
-    }
+
+/*
+ *    ----------------------------
+ *      Fonts for mobile version 
+ *    -----------------------------
+ */
+h1, p, .button, a {
+    font-family: 'OpenSans Light', sans-serif;
+}
+nav, h2, h3 {
+    font-family: 'OpenSans SemiBold', sans-serif;
+}
+h4,h5 {
+    font-family: 'OpenSans', sans-serif;
+}
+
+h2,h4,p,a {
+    color: $black-light;
+}
+h3 {
+    color: $orange;
+    text-transform: uppercase;
+}
+h5 {
+    color:$black-lite-light;
+}
+a {
+    font-size: 0.875rem; //14
+    line-height: 2rem; //32px
+}
 
 
 .color-light {
@@ -264,83 +204,29 @@ header {
     color: #fff;    
 }
 
+/* 
+ *    ----------------------------
+ *      Table of contents
+ *    --------------------------
+ *  - header
+ *  - main
+ *  - about
+ *  - contact
+ *  - blog
+ *  - project
+ *  - widget-elegant
+ */
 
-
-.about .services {
-  h2, p, li {
-    color: $black-lite-light;
-  }
-  h2 {
-      font-size: 2.1875rem; //35px;
-      margin-bottom: 6.875vw;
-      margin-top: 3.4375vw;
-  } 
-  p,li {
-      font-size: 0.875rem; //14
-  }
-  p {
-      line-height: 1.75rem; //28
-      padding-left: 10px;
-  }
-  @media (max-width: 768px ) {
-      p {
-          font-size: 1.9375rem; //31px
-          line-height: 3.5625rem; //57px
-      }
-      h2 {
-          font-size: 85px;//85
-          line-height: 114px;//114
-          margin: 82px 0 167px;
-      }
-      li {
-          font-size: 34px;
-          line-height: 57px;
-      }
-  }
-}
-
-
-@media (max-width: 768px ){
-  h2 {
-    font-size: 3.9375rem; //60px;
-    line-height: 3.875rem; //62px
-    color: $gray;
-    margin-bottom: 5rem; // 80
-  }
-  h3 {
-      font-size: 1.75rem; //28px;
-      line-height: 3.75rem; //60
-  }
-  h4 {
-
-  }
-  h5 {
-  }
-  p {
-      font-size: 1.813rem; //29
-      line-height: 2.937rem; //47
-      color: $black-lite-light;
-  }
-  .about .content p {
-    font-size: 2.1875rem; //35px
-    line-height: 2.875rem; //46px
-  }
-  a {
-  }
-}
-
+/*      header     */
+header {
   h1 {
     font-size: 95px;
-    line-height: 139px;
+    line-height: 140px;
     letter-spacing: 4px;
-  }
-  @media (min-width: 768px) {
-    h1 {
-      font-size: 80px;
-      line-height: 60px;
-    }
-  }  
+  } 
+}
 
+ /*     main     */
 .main {
   
   h2 {
@@ -393,7 +279,7 @@ header {
     }
   }
   @media (min-width: 768px) {
-    
+     
     h2 {
       font-size: 44px;
       line-height: 60px;
@@ -468,6 +354,55 @@ header {
   }
   
 }
+
+/*      about      */
+/* ---------------- */
+
+.about {
+  .content {
+    p {
+      font-size: 1.125rem; // 18px;
+      line-height: 1.875rem;// 30px;
+      color: $gray;
+    }
+  }  
+  .services {
+    h2, p, li {
+      color: $black-lite-light;
+    }
+    h2 {
+        font-size: 2.1875rem; //35px;
+        margin-bottom: 6.875vw;
+        margin-top: 3.4375vw;
+    } 
+    p,li {
+        font-size: 0.875rem; //14
+    }
+    p {
+        line-height: 1.75rem; //28
+        padding-left: 10px;
+    }
+    @media (max-width: 768px ) {
+        p {
+            font-size: 1.9375rem; //31px
+            line-height: 3.5625rem; //57px
+        }
+        h2 {
+            font-size: 85px;//85
+            line-height: 114px;//114
+            margin: 82px 0 167px;
+        }
+        li {
+            font-size: 34px;
+            line-height: 57px;
+        }
+    }
+  }
+
+} 
+
+/*      contact      */
+/* ---------------- */
 .contact {
   // mobile style
   h2 {
@@ -507,7 +442,8 @@ header {
     }
   }
 }
-
+/*      blog     */
+/* ---------------- */
 .blog {
   h2 {
     font-family: 'OpenSans Light', sans-serif;
@@ -556,6 +492,9 @@ header {
   }
 }
 
+/*      project      */
+/* ---------------- */
+
 .project {
   strong {
     font-family: 'Cardo Bold', sans-serif;
@@ -584,6 +523,8 @@ header {
   }
 }
 
+/*      widget-elegant       */
+/* ---------------- */
 .widget-elegant {
   
   h2 {

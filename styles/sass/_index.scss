@@ -104,10 +104,7 @@
         &-location, &-phone, &-fax, &-email {
             padding-bottom: 150px;
         }
-        &-location {}
-        &-phone {}
-        &-fax {}
-        &-email {}
+        
     }
     @media (min-width: 768px) {
         .about {
@@ -219,10 +216,7 @@
         &-location, &-phone, &-fax, &-email {
             padding-bottom: 40px;
         }
-        &-location {}
-        &-phone {}
-        &-fax {}
-        &-email {}
+        
     }
     }
 }
