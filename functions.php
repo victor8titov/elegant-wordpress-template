@@ -206,7 +206,8 @@ function p($obj, $text = '') {
 		overflow: scroll;
 		max-height: 80%;
 		max-width: 80%;
-		min-width: 300px;">
+		min-width: 300px;
+		text-align: left">
 	<?php echo ' --'. $text .'-- <br>'; print_r($obj); ?>
 	</pre>
 	<script>

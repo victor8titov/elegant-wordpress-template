@@ -421,7 +421,7 @@ $(function() {
             $('.header-menu').addClass('resetS');
         }
         $(document.body).on('click', function() {
-            menuCustomAnimateDesktop();
+            if ( !menuStatus ) menuCustomAnimateDesktop();
             });
 
         $('#site-navigation').on('click', function(event) {
@@ -562,8 +562,102 @@ $(function() {
     }   
 
 
+    /* 
+    *       ************************************
+    *           Загрузка постов по ajax в posts
+    *       ************************************
+    */
+    $('#load-more-post').click(function(){
+        $(this).text('Load...'); // изменяем текст кнопки, вы также можете добавить прелоадер
+        var data = {
+            'action': 'loadmorepost',
+            'query': ajaxQueryPosts.query_vars,
+            'page':  ajaxQueryPosts.current_page,
+            };
+        $.ajax({
+            url: ajaxQueryPosts.url, // обработчик
+            data: data, // данные
+            type: 'POST', // тип запроса
+            success:function( data ){
+                if( data ) {
+                    //console.log(data);
+                    $('#load-more-post').text('Load More Posts'); // вставляем новые посты
+                    $('.blog .content').append( data );
+                    ajaxQueryPosts.current_page++; // увеличиваем номер страницы на единицу
+                    
+                    if (ajaxQueryPosts.current_page == ajaxQueryPosts.max_pages) $("#load-more-post").remove(); // если последняя страница, удаляем кн
+                } else {
+                    $('#load-more-post').remove(); // если мы дошли до последней страницы постов, скроем кнопку
+                }
+            }
+        });
+        return false;
+    });
 
-    
+    /* 
+    *       *********************************
+    *           Форма обратной связи
+    *       **********************************
+    */
+   var boxForm = $('.contact .box-form'),
+        submit = $('.contact #submit');
+
+   boxForm.addClass('animated');
+   $('#show-form').on('click', function() {
+        boxForm.toggleClass('active').removeClass('bounceOutRight').addClass('bounceInLeft');
+        return false;
+   });
+
+   function closeFormBox() {
+        boxForm.removeClass('bounceInLeft').addClass('bounceOutRight');
+        setTimeout(run, 300);
+        function run() {
+            boxForm.toggleClass('active');
+            boxForm.find('.spinner-border').addClass('invisible');
+            boxForm.find('.message').addClass('invisible');
+        }
+        
+   }
+   $(' #button-close').on('click', function() {
+     closeFormBox();
+   })
+
+   /*       формироваине запроса на сервер от формы      */
+   $('.contact .form').on('submit', function() {
+        boxForm.find('.spinner-border').toggleClass('invisible');
+        boxForm.find('.message').toggleClass('invisible').find('.status').text('Send...') 
+        $.ajax( {
+            type: 'POST',
+            url: ajaxQueryForm.url,
+            //dataType:'json',
+            data: {
+            'name'      : $('.contact #name').val(),
+            'email'     : $('.contact #email').val(),
+            'message'   : $('.contact #message').val(),
+            'comment'   : $('.contact #comment').val(),
+            'content'   : $('.contact #content').val(),
+            'action'    :'sendform',
+            },
+
+            success: function (data) {
+                boxForm.find('.spinner-border').toggleClass('invisible');
+                if (data) {
+                    boxForm.find('.message .status').text('The letter is successfully accepted for processing. Thanks for your question');
+                    setTimeout(closeFormBox, 3000);
+                } else {
+                    boxForm.find('.message .status').text('Yours the letter was not sent. Try to send later.');
+                }
+            },
+
+            error: function () {
+                boxForm.find('.spinner-border').toggleClass('invisible');
+                boxForm.find('.message .status').text('Connection error! Try to send later.');
+            }
+        });//end ajax
+        return false;
+   });
+
+
 
 });// end $(function)
 

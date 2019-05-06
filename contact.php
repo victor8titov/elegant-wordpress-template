@@ -75,9 +75,42 @@ get_header();
 			</div>
 			<div class="col-12 text-center">
 				<div class="box-button">
-					<a href="#" class="button">Shote us an Email</a>
+					<a href="#" class="button" id="show-form">Shote us an Email</a>
 				</div>
-				
+				<div class="box-form">
+					<div class="button-close" id="button-close"></div>
+					<h2 class="text-uppercase mb-4">Contact us</h2>
+        			<p class="mb-4">Please contact us for all inquiries.</p>
+       
+					<form action="#" method="post" class="form">
+						<div class="row justify-content-center">
+							<div class="form-group col-12 col-md-6">
+								<input type="text" id="name" name="name" class="form-control " placeholder="Name" required>
+							</div>
+							<div class="form-group col-12 col-md-6">
+								<input type="email" class="form-control " id="email" aria-describedby="emailHelp" name="email" placeholder="Enter Email" required>
+							</div>
+							<div class="form-group col-12">
+								<textarea class="form-control " rows="5" placeholder="Enter the messsage" name="message" id="message" required></textarea>
+								<textarea name="comment" id="comment"></textarea>
+        						<textarea name="content" id="content"></textarea>
+							</div>
+							<div class="col-12 col-md-4 ">
+								<button type="submit" class="button  w-100" id="submit" >Send</button>
+							</div>
+						</div>
+					</form>
+					<div class="message invisible d-flex flex-column justify-content-center align-items-center " id="form-message">
+						<div class="spinner-border text-secondary  invisible" role="status">
+						</div>
+						<h4 class="status m-5"></h4>
+					</div>
+					<script>
+					var ajaxQueryForm = {
+						url: '<?php echo site_url() ?>/wp-admin/admin-ajax.php',
+					}                
+					</script>
+				</div>
 			</div>
 		</div>
 	</div>
