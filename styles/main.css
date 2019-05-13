@@ -7444,6 +7444,38 @@ header h1 {
     font-size: 20px;
     line-height: 32px; } }
 
+/* 
+*     Work
+*--------------
+*/
+.work h3 {
+  font-size: 28px;
+  line-height: 47px; }
+
+.work h2 {
+  font-size: 90px;
+  line-height: 90px;
+  margin-bottom: 70px; }
+
+.work p {
+  font-size: 29px;
+  line-height: 47px; }
+
+@media (min-width: 768px) {
+  .work h3 {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0.03rem;
+    margin-bottom: 20px; }
+  .work h2 {
+    font-size: 44px;
+    line-height: 44px;
+    letter-spacing: 0.1rem;
+    margin-bottom: 42px; }
+  .work p {
+    font-size: 18px;
+    line-height: 32px; } }
+
 /*      widget-elegant       */
 /* ---------------- */
 .widget-elegant h2 {
@@ -7942,7 +7974,7 @@ header .masthead {
 
 footer {
   background-color: #eeeeee;
-  padding: 3.75rem 0; }
+  padding: 25px 0; }
   footer p, footer a {
     font-size: 1rem;
     line-height: 2rem;
@@ -7956,10 +7988,12 @@ footer {
   footer a:focus {
     color: #021725; }
   @media (max-width: 768px) {
-    footer p, footer a {
-      font-size: 1.875rem;
-      line-height: 3rem;
-      color: #82888c; } }
+    footer {
+      padding: 3.75rem 0; }
+      footer p, footer a {
+        font-size: 1.875rem;
+        line-height: 3rem;
+        color: #82888c; } }
 
 .main {
   /* section last post mobile style */
@@ -8139,7 +8173,7 @@ footer {
 .work {
   padding: 0 0 8px; }
   .work .work-header {
-    padding: 125px 0 135px; }
+    padding: 125px 0 108px; }
     @media (max-width: 768px) {
       .work .work-header {
         padding: 238px 0 230px; } }

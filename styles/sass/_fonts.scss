@@ -526,6 +526,44 @@ header {
   }
 }
 
+/* 
+*     Work
+*--------------
+*/
+.work {
+  h3 {
+    font-size: 28px;
+    line-height: 47px;
+  }
+  h2 {
+    font-size: 90px;
+    line-height: 90px;
+    margin-bottom: 70px;
+  }
+  p {
+    font-size: 29px;
+    line-height: 47px;
+  }
+  @media(min-width: 768px) {
+    h3 {
+      font-size: 13px;
+      line-height: 13px;
+      letter-spacing: 0.03rem;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 44px;
+      line-height: 44px;
+      letter-spacing: 0.1rem;
+      margin-bottom: 42px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
+
 /*      widget-elegant       */
 /* ---------------- */
 .widget-elegant {

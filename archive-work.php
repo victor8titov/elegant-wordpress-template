@@ -32,6 +32,8 @@ get_header();
 				</div>
 				<div class="col-12 d-flex flex-wrap justify-content-center p-0 work-content">	
 				<?php
+				global $query_string;
+				query_posts($query_string.'&posts_per_page=8');
 				if ( have_posts() ) :			
 
 					/* Start the Loop */
@@ -55,6 +57,7 @@ get_header();
 						</article>
 					<?php	
 					endwhile;
+					wp_reset_query();
 					
 				else :
 
