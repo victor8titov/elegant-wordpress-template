@@ -73,3 +73,49 @@ function elegant_send_form() {
 }
 add_action('wp_ajax_sendform', 'elegant_send_form');
 add_action('wp_ajax_nopriv_sendform', 'elegant_send_form');
+
+
+/* 
+*       ****************************************
+*           load Project
+*       ****************************************
+ */
+function elegant_load_project(){
+    $id = $_POST['id']; // следующая страница
+    
+    $query = new WP_Query(array(
+        'post_type' 	 => 'project',
+        'posts_per_page' => 1,
+        'p'             => $id,
+    ) );
+    
+    while($query->have_posts() ) {
+        $query->the_post();
+        //the_ID();
+        //print_r($query);
+        get_template_part( 'template-parts/content', 'project' ); 		
+    }
+    wp_reset_postdata();
+
+    /* start custom loop */
+    /* $myposts = get_posts( array(
+        'post_type' 	 => 'project',
+        'posts_per_page' => 1,
+        'ID'             => $id,
+    ));
+    foreach ($myposts as $post):
+        setup_postdata( $post );
+
+        get_template_part( 'template-parts/content', 'project' ); 		
+
+    endforeach;
+    wp_reset_postdata(); */
+    /* end custom loop */
+    
+    
+    die();
+    
+}
+
+add_action('wp_ajax_loadmoreproject', 'elegant_load_project');
+add_action('wp_ajax_nopriv_loadmoreproject', 'elegant_load_project');

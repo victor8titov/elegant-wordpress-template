@@ -658,6 +658,104 @@ $(function() {
    });
 
 
+   /* 
+    *       *********************************
+    *
+    *           Перемещени по странице вниз
+    *           MOVE DOWN
+    *           work on about and project pages
+    *       
+    *       **********************************
+    */
+    $('.page-project .move-down, .page-about .move-down').removeClass('invisible').on('click',function() {
+        $('html, body').animate({
+            scrollTop: $('.project, .about').offset().top 
+        }, 1000);
+    });
+    
+    
+    /*
+    *       **********************************************
+    *
+    *           Подгрузка постов в категории Project
+    *           AJAX load new post Project
+    * 
+    *       **********************************************
+    */
+   stackProjects = {};
+   $('.project .sidebar .project-img a').on('click', function() {
+        var elm = $(this),
+            id = $(this).attr('data-id'), 
+            onePost = $('#one-post'),
+            box = $('#box-one-post'),
+            id_current = onePost.attr('data-id');
+
+        spinner('show');
+
+        if ( !stackProjects[id_current] ) {
+            stackProjects[id_current] = onePost.clone();
+        }
+
+        if ( !stackProjects[id] ) {
+            $.ajax({
+                url: ajaxQueryProject.url, // обработчик
+                data: {
+                    'action': 'loadmoreproject',
+                    'id'    : id, 
+                }, // данные
+                type: 'POST', // тип запроса
+                success: function( data ){
+                    if( data ) {
+                        console.log('answer ajax');
+                        //console.log(stackProjects);
+                        //console.log(data);
+                        //stackProjects[id] =  $( data ) ;
+                        replacePosts( data );
+
+                    } else {
+                        console.log('error ajax answer');
+                    }
+                }
+            });
+        } else {
+            replacePosts();
+        }
+        
+        function replacePosts( data ) {
+            data = data ? data : stackProjects[id];
+            box.animate({
+                'opacity': 0,
+            },400, function complete() {
+                $('html, body').animate({
+                    scrollTop: $('.project').offset().top,
+                },600);
+                onePost.detach();
+                box.append( data ).animate({'opacity': 1.0,},400);
+            });
+            spinner('hidden');
+        }
+        function spinner(comand) {
+            if (comand === 'show') {
+                $('<span></span>').css({
+                    'position': 'absolute',
+                    'left': '50%',
+                    'top': '50%',
+                }).addClass('spinner-border').prependTo(elm);
+                elm.css({
+                'opacity': 0.4,
+                });
+            }
+            if (comand === 'hidden') {
+                $('.spinner-border').remove();
+                elm.css({
+                    'opacity': 1,
+                    });
+            }
+            
+        }
+       return false;
+   })
+
 
 });// end $(function)
 

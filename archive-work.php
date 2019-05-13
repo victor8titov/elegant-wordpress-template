@@ -55,9 +55,7 @@ get_header();
 						</article>
 					<?php	
 					endwhile;
-					// Навигация (ссылки на след. пред посты)
-					the_posts_navigation();
-
+					
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );

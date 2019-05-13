@@ -86,5 +86,6 @@ $name_class = '';
 				<h1>Say <span class="italic">Haloa</span> to your Portfolio</h1>
 			</div>					
 		</div>
-  </div>
+		<div class="move-down invisible"></div>
+  	</div>
 </header>

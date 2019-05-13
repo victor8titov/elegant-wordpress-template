@@ -7833,6 +7833,21 @@ header h1 {
   backface-visibility: visible !important;
   animation-name: flipInX; }
 
+.move-down {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  background: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgODYuMDAxIDg2LjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgODYuMDAxIDg2LjAwMTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjQ1NjYxLCAwLCAwLCAwLjQ1NjYxLCAyMy4zNjYsIDIzLjM2NikiPjxnPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZD0iTTUuOTA3LDIxLjAwNGMtMS4zNTItMS4zMzgtMy41NDItMS4zMzgtNC44OTQsMGMtMS4zNSwxLjMzNi0xLjM1MiwzLjUwNiwwLDQuODQ0bDM5LjU0LDM5LjE1ICAgYzEuMzUyLDEuMzM4LDMuNTQyLDEuMzM4LDQuODk0LDBsMzkuNTQtMzkuMTVjMS4zNTEtMS4zMzgsMS4zNTItMy41MDYsMC00Ljg0NGMtMS4zNTItMS4zMzgtMy41NDItMS4zMzgtNC44OTQtMC4wMDJMNDMsNTYuNzA3ICAgTDUuOTA3LDIxLjAwNHoiIGRhdGEtb3JpZ2luYWw9IiMwMzAxMDQiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiNmZmZmZmYiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+") no-repeat center center;
+  background-size: contain;
+  transition: all 300ms ease-in-out; }
+  .move-down:hover, .move-down:focus {
+    transform: scale(1.4); }
+
 .page-main {
   background: url("../img/bg-main-mb.jpg") no-repeat center center;
   min-height: 1336px; }
@@ -7861,6 +7876,7 @@ header h1 {
     display: none; }
 
 .page-project {
+  position: relative;
   background: url("../img/bg-project-mb.jpg") no-repeat center center;
   background-size: cover;
   min-height: 1335px; }
@@ -7872,6 +7888,7 @@ header h1 {
     display: none; }
 
 .page-about {
+  position: relative;
   background: url("../img/bg-about-mb.jpg") no-repeat center center;
   background-size: cover;
   min-height: 1337px; }
@@ -8169,6 +8186,7 @@ footer {
         height: auto !important;
         min-height: 100%; }
   .project .sidebar .project-img {
+    position: relative;
     width: 100%;
     max-width: 750px;
     overflow: hidden;

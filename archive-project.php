@@ -29,51 +29,28 @@ get_header();
 	<!-- ONE POST AND SIDEBAR MORE POSTS -->
 	<div class="content container">
 		<div class="row">
-			<div class="col-12 col-lg-8">
-				
-				<?php 
-				/* start custom loop */
-					$myposts = get_posts( array(
-						'post_type' 	=> 'project',
-						'posts_per_page' => 1,
-					));
-					foreach ($myposts as $post):
-						setup_postdata( $post );
-						$first_id = get_the_ID();
-						$stack_ID_images = get_post_meta( get_the_ID(), 'images');
-
-						if ( has_post_thumbnail() ) :
-							$html_string_thumbnail = get_the_post_thumbnail( get_the_ID(), 'large', array('class'=>'img-fluid'));
-						endif;
-						if ( $stack_ID_images ):
-							foreach ($stack_ID_images as $ID_img) {
-								$html_string_images_from_meta .= '<li class="box-img">' . wp_get_attachment_image( $ID_img, 'large' ) . '</li>';	
-							}
-						endif;
-				?>	
-				<article id="one-post" class="one-post">
-					<header class="header">
-						<?php
-						the_title( '<h2 class="entry-title">', '</h2>' );
-						?>
-					</header><!-- .entry-header -->
-
-					<div class="content-one-post">
-						<?php
-						the_content( );								
-						?>
-						<ul>
-							<li class="box-img"><?php echo $html_string_thumbnail; ?></li>
-							<?php echo $html_string_images_from_meta; ?>
-						</ul>
-					</div><!-- .entry-content -->			
-				</article><!-- #post-<?php the_ID(); ?>  -->
-
-				<?php
+			<div class="col-12 col-lg-8" id="box-one-post">
+			<?php 
+			/* start custom loop */
+				$myposts = get_posts( array(
+					'post_type' 	=> 'project',
+					'posts_per_page' => 1,
+				));
+				foreach ($myposts as $post):
+					setup_postdata( $post );
+					$first_id = get_the_ID();
+			
+					get_template_part( 'template-parts/content', 'project' ); 		
+			
 				endforeach;
 				wp_reset_postdata();
-				/* end custom loop */
-				?>
+			/* end custom loop */
+			?>
+			 <script>
+                var ajaxQueryProject = {
+                    url: '<?php echo site_url() ?>/wp-admin/admin-ajax.php',
+                }                
+                </script>
 			</div>
 			<div class="col-12 col-lg-4">
 				<aside class="sidebar">
@@ -81,7 +58,7 @@ get_header();
 						<?php
 						/* GENERAL LOOP */
 						global $query_string; // параметры базового запроса
-						query_posts( $query_string .'&posts_per_page=6');
+						query_posts( $query_string .'&posts_per_page=10');
 						if ( have_posts() ) :
 							/* Start the Loop */
 							while ( have_posts() ) :
@@ -92,7 +69,7 @@ get_header();
 								?>
 
 						<li class= "project-img">
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>" data-id = "<?php the_ID(); ?>">
 								<?php echo $img; ?>
 							</a>		
 						</li>	
