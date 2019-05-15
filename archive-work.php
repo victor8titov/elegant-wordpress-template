@@ -35,10 +35,12 @@ get_header();
 				global $query_string;
 				query_posts($query_string.'&posts_per_page=8');
 				if ( have_posts() ) :			
-
+					
+					
 					/* Start the Loop */
 					while ( have_posts() ) :
 						the_post();
+						save_data_post();
 						/*
 						* Include the Post-Type-specific template for the content.
 						* If you want to override this in a child theme, then include a file
@@ -46,14 +48,10 @@ get_header();
 						*/
 						?>
 						<!-- Post content -->
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<article data-post-id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 							<div class="thumbnail">
 								<img src="<?php echo get_the_post_thumbnail_url(  ); ?>" alt="<?php echo get_the_post_thumbnail_caption( ); ?>" class="">
 							</div>
-							<div class="content">
-							
-							</div>
-							
 						</article>
 					<?php	
 					endwhile;
@@ -69,24 +67,25 @@ get_header();
 				</div>
 			</div>	
 		</div>
+		<div class="more-content" id="more-content">
+			<div class="container  h-100 w-75 ">
+				<div class="row ">
+					<div class="col-12 col-md-5 box-picture ">
+						<div class="thumbnail" id="thumbnail"></div>
+					</div>
+					<div class="col-12 col-md-7 box-content ">
+						<h2 class="title"></h2>
+						<p class="content"></p>
+						<div class="list-picture my-5" id="list-picture"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var works = <?php echo save_data_post('convert_json'); ?> 
+			console.log(works);
+		</script>
 	</section>
-
-
-
-
-<?php
-if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-			
-			?>
-
 <?php
 
-
-//get_sidebar();
 get_footer();

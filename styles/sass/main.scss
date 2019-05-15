@@ -82,6 +82,9 @@
         letter-spacing: 1.3px;
     }
  }
+ a {
+     outline: none!important;
+ }
  @import 'fonts';
  @import 'widget';
  @import 'menu';

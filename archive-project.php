@@ -50,7 +50,7 @@ get_header();
                 var ajaxQueryProject = {
                     url: '<?php echo site_url() ?>/wp-admin/admin-ajax.php',
                 }                
-                </script>
+			</script>
 			</div>
 			<div class="col-12 col-lg-4">
 				<aside class="sidebar">

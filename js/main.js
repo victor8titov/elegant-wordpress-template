@@ -754,7 +754,193 @@ $(function() {
             
         }
        return false;
-   })
+   });
+
+    /*
+    *       **********************************************
+    *
+    *           WORKS
+    *           Анимация и работа показа доп окна 
+    *           на странице works
+    * 
+    *       **********************************************
+    */
+    var more_content = $('#more-content'),
+        desktop = $(window).width() > 768 ? 1 : 0;
+    
+    // метод библиотеки masonry 
+    // выполняет перерасчет положения элементов.
+    // Инициализация библиотеки masonry для 
+    // постановки миниатюр в аккуратный порядок
+    var grid_masnry = $('#list-picture').masonry({
+        // options
+        itemSelector: '.item-pic',
+        //columnWidth: 100,
+        gutter: 10,
+        percentPosition: true,
+        }); 
+    
+    //  Главный обработчик
+    $('.type-work').on('click', function(event) {
+        var elm = $(this);
+        var offset = elm.offset(),
+            id = elm.attr('data-post-id');
+        
+        generate_post_content(id);
+        
+        animate('show');
+        
+        /*          Events           */
+
+        // обработчик событий клика на миниатюру
+        $("#list-picture .item-pic").on('click', function() {
+            var thumbnail = $('#more-content .box-picture #thumbnail');
+            var id_pic = $(this).attr('data-id');
+            if (desktop) {
+                thumbnail.animate({
+                    'opacity': 0.0,
+                }, 300, function() {
+                    
+                    thumbnail.find('img').attr({
+                        'src': works[id].stack_img[id_pic]['url'],
+                    });
+        
+                    thumbnail.animate({
+                        'opacity': 1.0,
+                    }, 300);
+                })
+            } else {
+                $(this).toggleClass('big');
+                // trigger layout after item size changes
+                grid_masnry.masonry('layout');
+            }
+
+            return false;
+        });
+
+        // Закрытие окна
+        // клик на любую область кроме миниатюры.
+
+        $('#more-content').on('click', function(event){
+            if( $(event.target).is($('#more-content .list-picture .item-pic img'))) return;
+            animate('hidden');
+            return false;
+        })
+        
+        function animate(comand) {
+            if (comand === 'show') {
+                
+                var pic = $('#more-content #thumbnail');
+                var topF = pic.offset().top,
+                    leftF = pic.offset().left,
+                    widthF = pic.width(),
+                    heightF = pic.height(),
+                    scrollTop = $(window).scrollTop();
+       
+                if (desktop) {
+                    var pic_clone = elm.find('.thumbnail').clone().appendTo(elm).css({
+                        'position': 'fixed',
+                        'left': offset.left,
+                        'top': offset.top -  scrollTop,
+                        'z-index': 100,
+                    }).animate({
+                        'left': leftF,
+                        'top': topF - scrollTop,
+                        'width': widthF,
+                        'height': heightF,
+                        'max-width': '100%',
+                    }, {
+                        duration: 300,
+                        complete: show_thumbnail,
+                        progress: function(anim, progress) {
+                            if (progress > 0.6) {
+                                pic_clone.find('img').css({
+                                    'width': '100%',
+                                })
+                            }
+                        }
+                    } );
+                    
+                } else {
+                    show_thumbnail();
+                }
+
+                function show_thumbnail() {
+                    more_content.css({
+                        'visibility': 'visible',                        
+                    }).animate({
+                        'opacity': 1.0,
+                    }, 300, function() {
+                        more_content.find('#thumbnail').css('opacity','1');
+                        if (desktop) pic_clone.remove();
+                        show_list_picture();
+                    })
+                }
+
+                function show_list_picture() {
+                    grid_masnry.masonry('reloadItems');
+                    grid_masnry.masonry('layout');
+                    more_content.find('#list-picture').animate({
+                        'opacity': 1.0,
+                        }, 300, show_box_content);
+                    
+                    
+                }
+
+                function show_box_content() {
+                    more_content.find('.title').animate({
+                        'opacity': 1.0,
+                    }, {
+                        duration: 300,
+                        complete: function() {
+                            more_content.find('.content').animate({
+                                'opacity': 1.0,
+                            }, 300);
+                        }
+                    });
+                    
+                }
+
+                return;
+            }// end comand show
+            
+            if (comand === 'hidden') {
+                more_content.animate({
+                    'opacity': 0.0,
+                },300, function() {
+                    more_content.css('visibility', 'hidden');
+                });
+                $('.title, .content, #list-picture, #thumbnail').css('opacity','0');
+                $("#list-picture .item-pic").off('click');
+                $('#more-content').off('click');
+                return;
+            }// end comand hidden
+        }
+        
+        
+        //  Функция генерации контента поста во всплывающем окне.
+        function generate_post_content(post_id) {
+            more_content.find('.box-content .title').html(works[post_id].title);
+            more_content.find('.box-content .content').html(works[post_id].content);
+            more_content.find('#thumbnail').html('<img alt="" src="'+ works[post_id].stack_img['thumbnail']['url']+'" >');
+            more_content.find('#list-picture').html('');
+            for( var i in works[post_id].stack_img) {
+                more_content.find('#list-picture ').append('<div class="item-pic" data-id = "'+works[post_id].stack_img[i]['id']+'"><img alt="" src="'+ works[post_id].stack_img[i]['url']+'" ></div>');
+            }
+            
+        } 
+    });
+    
+    
+
+    
+    
+    
+    
+    
+   
+      
+     
 
 
 });// end $(function)

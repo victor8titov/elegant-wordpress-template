@@ -7053,6 +7053,9 @@ a.text-dark:hover, a.text-dark:focus {
       padding: 21px 45px 21px 58px;
       letter-spacing: 1.3px; } }
 
+a {
+  outline: none !important; }
+
 @font-face {
   font-family: "OpenSans Bold";
   src: url("../fonts/OpenSans-Bold.eot");
@@ -7211,6 +7214,7 @@ header {
  *  - contact
  *  - blog
  *  - project
+ *  - work
  *  - widget-elegant
  */
 /*      header     */
@@ -8178,13 +8182,16 @@ footer {
       .work .work-header {
         padding: 238px 0 230px; } }
   .work .type-work {
-    padding: 3px; }
-    @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px; }
+    @media (min-width: 768px) {
       .work .type-work {
-        width: 100%;
-        padding-left: 0px;
-        padding-right: 0px; } }
+        width: auto;
+        padding: 3px;
+        cursor: pointer; } }
     .work .type-work .thumbnail {
+      position: relative;
       max-width: 314px;
       height: 300px;
       overflow: hidden; }
@@ -8197,6 +8204,44 @@ footer {
             min-width: 100%; } }
     .work .type-work .content {
       display: none; }
+  .work .more-content {
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0.0;
+    z-index: 100;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); }
+    .work .more-content h2, .work .more-content p {
+      color: #fff; }
+    .work .more-content h2 {
+      font-size: 30px; }
+    .work .more-content p {
+      font-size: 16px; }
+    .work .more-content .container {
+      margin-top: 10vh; }
+    .work .more-content .box-picture #thumbnail {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      opacity: 0.0; }
+      .work .more-content .box-picture #thumbnail img {
+        width: 100%; }
+    .work .more-content .box-content .title, .work .more-content .box-content .content {
+      opacity: 0.0; }
+    .work .more-content .box-content #list-picture {
+      opacity: 0.0; }
+      .work .more-content .box-content #list-picture .item-pic {
+        margin-bottom: 10px;
+        width: 18%;
+        cursor: pointer; }
+        .work .more-content .box-content #list-picture .item-pic img {
+          max-width: 100%; }
+      .work .more-content .box-content #list-picture .big {
+        width: 100%; }
 
 .project {
   margin: 147px 37px 32px; }

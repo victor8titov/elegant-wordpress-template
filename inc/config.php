@@ -96,6 +96,7 @@ function ele_get_post_types() {
 add_filter( 'rwmb_meta_boxes', 'ele_meta_boxes' );
 function ele_meta_boxes( $meta_boxes ) {
     $prefix = 'ele_';
+    /*      PROJECT      */
     $meta_boxes[] = array(
         'id'         => 'info',
         'title'      => 'Additional date',
@@ -119,6 +120,31 @@ function ele_meta_boxes( $meta_boxes ) {
             
         )
     );
+    /*      WORKS        */
+    $meta_boxes[] = array(
+        'id'         => 'info',
+        'title'      => 'Additional date',
+        'post_types' => 'work',
+        'context'    => 'normal',
+        'priority'   => 'high',
+
+        'fields' => array(
+            array(
+                'id'               => 'images',
+                'name'             => 'Image Advanced',
+                'type'             => 'image_advanced',
+            
+                // Delete image from Media Library when remove it from post meta?
+                // Note: it might affect other posts if you use same image for multiple posts
+                'force_delete'     => false,
+                        
+                // Image size that displays in the edit page.
+                //'image_size'       => 'thumbnail',
+            ),
+            
+        )
+    );
+
     if( isset( $_GET['post'] ) ) $post_id = $_GET['post'];
 
     elseif( isset( $_POST['post_ID'] ) ) $post_id = $_POST['post_ID'];

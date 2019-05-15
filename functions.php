@@ -153,6 +153,10 @@ function elegant_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	if (get_post_type() === 'work') {
+		// wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '1.0');
+		wp_enqueue_script( 'masonary', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array('jquery'), '1.0');
+	}
 }
 add_action( 'wp_enqueue_scripts', 'elegant_scripts' );
 
@@ -225,4 +229,44 @@ function p($obj, $text = '') {
 	</script>
 
 	<?php
+}
+
+ /* 
+ *	-------------------------------------------------------------------------------------
+ *		Для работы скрипта на странице work
+ *	
+ *		Функция собирает данные из цикла и сохраняет в переменной works во фронтенде
+ *
+ * 	------------------------------------------------------------------------------------- 
+ */
+$works = array();
+function save_data_post($comand = '') {
+	global $works;	
+
+	$stack_ID_images = get_post_meta( get_the_ID(), 'images');
+	 if ( $stack_ID_images ):
+		foreach ($stack_ID_images as $ID_img) {
+			$stack_img[ $ID_img ] = [
+				'id'  => $ID_img,
+				'url' => wp_get_attachment_image_url($ID_img, 'large'), //wp_get_attachment_image( $ID_img, 'large' ); 			
+			];
+		}
+	endif; 
+	
+	$stack_img['thumbnail'] = [
+		'id' => 'thumbnail',
+		'url' =>  get_the_post_thumbnail_url( get_the_ID(), 'large' ),
+	];
+
+	$works['post-'.get_the_ID()] = [
+		'title' 	=> get_the_title(),
+		'content'	=> get_the_content(),
+		//'thumbnail' => get_the_post_thumbnail_url( get_the_ID(), 'large' ),//get_the_post_thumbnail( get_the_ID(), 'large', array('class'=>'img-fluid')),
+		'stack_img' => $stack_img,
+	];
+
+	if ($comand === 'convert_json') {
+		return json_encode($works);
+	}
+
 }
