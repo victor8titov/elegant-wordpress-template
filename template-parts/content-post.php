@@ -1,9 +1,6 @@
 <?php
 /**
  * Template part for displaying posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package Elegant
  */
 
@@ -32,7 +29,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; 
 		
-		the_content(  );
+		echo wp_trim_words( get_the_content( ), 50);
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'elegant' ),

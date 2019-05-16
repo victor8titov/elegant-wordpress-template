@@ -83,9 +83,7 @@ get_header();
 		</div>
 		<script>
 			var works = <?php echo save_data_post('convert_json'); ?> 
-			console.log(works);
 		</script>
 	</section>
 <?php
-
 get_footer();

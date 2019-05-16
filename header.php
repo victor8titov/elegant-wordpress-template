@@ -28,7 +28,7 @@ $name_class = '';
 		// главная страница
 		//	в настройка сайта указана статическая страница
 		$name_class = 'page-main';
-	} else if (get_post_type() === 'post' && is_home()) {
+	} else if (get_post_type() === 'post' ) {
 		// страница постов
 		$name_class='page-posts';
 	} else if (get_post_type() === 'work') {
@@ -43,7 +43,9 @@ $name_class = '';
 	} else if (is_page_template('about.php') && get_post_type() === 'page') {
 		// page в котором указан шаблон about.php
 		$name_class='page-about';
-	} 
+	} else {
+		$name_class = 'page-main';
+	}
 
 
 ?>

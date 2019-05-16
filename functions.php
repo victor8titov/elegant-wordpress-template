@@ -154,7 +154,6 @@ function elegant_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	if (get_post_type() === 'work') {
-		// wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '1.0');
 		wp_enqueue_script( 'masonary', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array('jquery'), '1.0');
 	}
 }
@@ -195,7 +194,7 @@ define( 'ELEGANT_URL', get_template_directory_uri() );
 
 require_once 'inc/init.php';
 
-
+// функция для разработки.
 function p($obj, $text = '') {
 	?>
 	<pre class="debug-code" style="
@@ -252,7 +251,7 @@ function save_data_post($comand = '') {
 			];
 		}
 	endif; 
-	
+
 	$stack_img['thumbnail'] = [
 		'id' => 'thumbnail',
 		'url' =>  get_the_post_thumbnail_url( get_the_ID(), 'large' ),

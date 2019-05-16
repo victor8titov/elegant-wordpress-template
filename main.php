@@ -74,7 +74,9 @@ get_header();
                     ?>
                     
                     <article class="post-work">
+                        <a href="<?php echo get_post_type_archive_link('work'); ?>">
                         <?php echo get_the_post_thumbnail( get_the_ID($post), 'full' ); ?>
+                        </a>
                     </article>
 
                     <?php        
