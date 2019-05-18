@@ -11,30 +11,26 @@ get_header();
 ?>
 
 <section class="main">
-    <!-- SECTION MAIN -->
-    <div class="wrapper">
-        <section class="main-loop">
-            <?php
-                if ( have_posts() ) :
-
     
-                    /* Start the Loop */
-                    while ( have_posts() ) :
-                        the_post();
-                        $id = get_the_ID();
-                
-                        the_content();
-
-                    endwhile;
-
-                    else :
-                    
-                        get_template_part( 'template-parts/content', 'none' );
-                    
-                    endif;
-            ?>
-        </section>
-    </div>
+        <?php
+            if (have_posts() ):
+            /* Start the Loop */
+            while ( have_posts() ) :
+                the_post();
+                $id = get_the_ID();
+                $main_content = get_the_content();
+            endwhile;
+            endif;
+        ?>
+        <?php if ($main_content): ?>
+        <!-- SECTION MAIN -->
+        <div class="wrapper">
+            <section class="main-loop">
+                    <?php echo apply_filters( 'the_content', $main_content ); ?>
+            </section>
+        </div>
+        <?php endif; ?>
+    
     <!-- SECTION ABOUT -->
     <?php 
         if ( get_post_meta( $id, 'about_show') ):
@@ -113,7 +109,7 @@ get_header();
                 <?php echo get_the_post_thumbnail( get_the_ID($post), 'full' ); ?>
                 <h3><?php echo get_post_meta( get_the_ID($post), 'people_prof',true); ?></h3>
                 <h4><?php the_title(); ?></h4>
-                <p><?php the_content(); ?></p>
+                <?php the_content(); ?>
             </article>
 
             <?php        

@@ -18,12 +18,17 @@
 
 /* mobile style */
 .header-menu {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     transition: all 300ms ease-in-out;
-    height: 100%;
-  
-    background-color: rgb(36,47,53);
+    //min-height: 113px;
+    //height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    
+    background-color: rgb(36, 47, 53);
     
     .menu-icon {
         position: absolute;
@@ -114,6 +119,8 @@
 @media (min-width: 768px) {
     .header-menu {
         background-color: transparent;
+        //height: 
+        //min-height: 42px;
        
         .menu-icon {
             left: 50%;

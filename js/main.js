@@ -302,24 +302,23 @@ $(function() {
             $(event.target).css('background','rgba(36,47,53, 0.9)').addClass('flipInX');
             event.stopPropagation();
             //return false;
-        })    
+        })
+        
+        if (firstClick) {
+            firstClick = !firstClick;
+            menuTogglemobile('hidden');
+            $('#header-menu').css({
+                'transition': 'inherit',
+                //'opacity': 1.0,
+            });
+           
+        }
+        
     }
 
     // переключает классы для показа или скрытия меню
    function menuTogglemobile(comand) {
         var menu = $('#header-menu');
-
-        if (firstClick) {
-            menu.css({
-                'transition': 'inherit',
-                'opacity': 1.0,
-            });
-            firstClick = !firstClick;
-            menuTogglemobile('hidden');
-        }
-
-        menu.toggleClass('visible-menu');
-        menu.toggleClass('hidden-menu');
         
         if (comand === 'visible' ) {
             menu.addClass('visible-menu');
@@ -331,6 +330,10 @@ $(function() {
             menu.addClass('hidden-menu');           
             return; 
         }
+
+        menu.toggleClass('visible-menu');
+        menu.toggleClass('hidden-menu');
+        
    }
 
    
@@ -448,10 +451,10 @@ $(function() {
         })    
     }
 
-       function menuCustomAnimateDesktop() {         
+    function menuCustomAnimateDesktop() {         
         if ( firstClick ) {
             calculPosition();
-           
+            
             el.a.each(function() {
                 StackElm.push([
                     this,
@@ -500,10 +503,11 @@ $(function() {
 
         if ( menuStatus ) {
             setTimeout(finish, 900);
-            function finish() {
-                menuToggleDesktop();
-            }
+            
         }
+    }
+    function finish() {
+        menuToggleDesktop();
     }
 
     function menuToggleDesktop(comand) {
@@ -596,6 +600,10 @@ $(function() {
                     //console.log(data);
                     $('#load-more-post').text('Load More Posts'); // вставляем новые посты
                     $('.blog .content').append( data );
+                    $('html, body').animate({
+                        scrollTop: $('.blog .content .post').last().prev().offset().top
+                    }, 1000);
+
                     ajaxQueryPosts.current_page++; // увеличиваем номер страницы на единицу
                     
                     if (ajaxQueryPosts.current_page == ajaxQueryPosts.max_pages) $("#load-more-post").remove(); // если последняя страница, удаляем кн
@@ -879,44 +887,47 @@ $(function() {
                         show_thumbnail();
                     }
 
-                    function show_thumbnail() {
-                        more_content.css({
-                            'visibility': 'visible',                        
-                        }).animate({
-                            'opacity': 1.0,
-                        }, 300, function() {
-                            more_content.find('#thumbnail').css('opacity','1');
-                            if (desktop) pic_clone.remove();
-                            show_list_picture();
-                        })
-                    }
-
-                    function show_list_picture() {
-                        grid_masnry.masonry('reloadItems');
-                        grid_masnry.masonry('layout');
-                        more_content.find('#list-picture').animate({
-                            'opacity': 1.0,
-                            }, 300, show_box_content);
-                        
-                        
-                    }
-
-                    function show_box_content() {
-                        more_content.find('.title').animate({
-                            'opacity': 1.0,
-                        }, {
-                            duration: 300,
-                            complete: function() {
-                                more_content.find('.content').animate({
-                                    'opacity': 1.0,
-                                }, 300);
-                            }
-                        });
-                        
-                    }
+                    
 
                     return;
                 }// end comand show
+
+
+                function show_thumbnail() {
+                    more_content.css({
+                        'visibility': 'visible',                        
+                    }).animate({
+                        'opacity': 1.0,
+                    }, 300, function() {
+                        more_content.find('#thumbnail').css('opacity','1');
+                        if (desktop) pic_clone.remove();
+                        show_list_picture();
+                    })
+                }
+
+                function show_list_picture() {
+                    grid_masnry.masonry('reloadItems');
+                    grid_masnry.masonry('layout');
+                    more_content.find('#list-picture').animate({
+                        'opacity': 1.0,
+                        }, 300, show_box_content);
+                    
+                    
+                }
+
+                function show_box_content() {
+                    more_content.find('.title').animate({
+                        'opacity': 1.0,
+                    }, {
+                        duration: 300,
+                        complete: function() {
+                            more_content.find('.content').animate({
+                                'opacity': 1.0,
+                            }, 300);
+                        }
+                    });
+                    
+                }
                 
                 if (comand === 'hidden') {
                     more_content.animate({

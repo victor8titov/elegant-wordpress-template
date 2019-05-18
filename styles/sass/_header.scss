@@ -90,7 +90,7 @@
 header {
     .header-logo {
         @media (max-width: 768px) {
-            max-width: 100%; 
+            //max-width: 100%; 
             background-color: rgba(36,47,53, 0.7);
         } 
         .custom-logo-link {
@@ -100,8 +100,15 @@ header {
             display: inline-block;
             @media (max-width: 768px ) {
                 img {
+                    //width: 100%;
                     width: 365px;
                     height: 81px;
+                }
+            }
+            @media (max-width: 540px) {
+                img {
+                    width: 180px;
+                    height: auto;
                 }
             }
         }        

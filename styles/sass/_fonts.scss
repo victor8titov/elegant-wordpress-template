@@ -221,10 +221,17 @@ header {
 /*      header     */
 header {
   h1 {
-    font-size: 95px;
-    line-height: 140px;
+    font-size: 70px;
+    line-height: 130px;
     letter-spacing: 4px;
   } 
+  @media (min-width: 576px) {
+    h1 {
+      font-size: 95px;
+      line-height: 140px;
+      letter-spacing: 4px;
+    } 
+  }
 }
 
  /*     main     */
@@ -277,6 +284,57 @@ header {
     p {
       font-size: 29px;
       line-height: 47px;
+    }
+  }
+  @media (min-width: 576) {
+    h2 {
+      font-size: 90px;
+      line-height: 92px;
+      margin-bottom: 3.5rem;
+    }
+    h3 {
+      font-size: 28px;
+      line-height: 60px;
+    }
+    h4 {
+      font-size: 40px;
+      line-height: 114px;
+    }
+    p {
+      font-size: 29px;
+      line-height: 52px;
+    }
+    .post-people {
+      h3 {
+        line-height: 28px;     
+        margin-bottom: 33px; 
+      }
+      h4 {
+        line-height: 40px;
+        margin-bottom: 48px;
+      }
+      p {
+        line-height: 43px;
+      }
+    }
+    .last-post {
+      h4 {
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 60px;
+        
+      }
+      h5 {
+        font-size: 28px;
+        line-height: 28px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+  
+      }
+      p {
+        font-size: 29px;
+        line-height: 47px;
+      }
     }
   }
   @media (min-width: 768px) {

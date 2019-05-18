@@ -57,14 +57,14 @@ $name_class = '';
 
 		<div class="row justify-content-between ">
 			<!-- LOGO -->
-			<div class="col-11 col-md-10 header-logo">
-				<?php
+			<div class="col-10 col-md-10 header-logo">
+			<?php
 				the_custom_logo();
-				?>
+			?>
 			</div>
-
-			<div class="col-1 col-md-2  p-0">
-				<!-- NAVIGATON -->
+			<!-- NAVIGATON -->
+			<div class="col-2 col-md-2  p-0">
+				
 				<nav id="site-navigation" class="header-menu ">
 					<div class="menu-icon" id="menu-icon">
 						<div class="line-1" id="line-1"></div>
