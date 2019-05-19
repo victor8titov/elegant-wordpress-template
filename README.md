@@ -50,7 +50,7 @@
 ###     Скриншоты шаблона
 
 ### Главная страница 
-![](///model_database/main.gif)
+![](model_database/main.gif)
 
 ### Страница Work
 ![](//model_database/work.gif)
