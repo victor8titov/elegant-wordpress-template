@@ -7672,7 +7672,8 @@ footer {
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
             border-radius: 10px;
-    border: 1px solid #f1f1f1; }
+    border: 1px solid #f1f1f1;
+    overflow: visible; }
     .contact .box-form .button-close {
       right: -15px;
       top: -15px;
