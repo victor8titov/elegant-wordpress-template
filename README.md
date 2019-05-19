@@ -3,7 +3,7 @@
 
 Шаблон выполнен на cms Wordpress. С применением Bootstrap 4, jquery 3.. Сделана адаптивная верстка согласно шаблону под Планшет и Мониторов. 
 
-В директориии **model&database** лежит скриншоты дизайна и база данных. А также картинки залитые в вордпресс для шаблона.
+В директориии **model_database** лежит скриншоты дизайна и база данных. А также картинки залитые в вордпресс для шаблона.
 
 ###  Тесты    
 
@@ -50,10 +50,10 @@
 ###     Скриншоты шаблона
 
 ### Главная страница 
-![](///model_database/main.gif)
+![](model_database/main.gif)
 
 ### Страница Work
-![](//model_database/work.gif)
+![](model_database/work.gif)
 
 ### Страница Contact
-![](//model_database/contact.gif)
+![](model_database/contact.gif)
