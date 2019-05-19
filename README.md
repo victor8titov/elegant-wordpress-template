@@ -53,7 +53,7 @@
 ![](model_database/main.gif)
 
 ### Страница Work
-![](//model_database/work.gif)
+![](model_database/work.gif)
 
 ### Страница Contact
-![](//model_database/contact.gif)
+![](model_database/contact.gif)
