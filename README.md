@@ -1,30 +1,42 @@
-## Template Elegant
-### Описание 
+# Template Elegant
+---
 
-Шаблон выполнен на cms Wordpress. С применением Bootstrap 4, jquery 3.. Сделана адаптивная верстка согласно шаблону под Планшет и Мониторов. 
+## Описание 
 
-В директориии **model&database** лежит скриншоты дизайна и база данных. А также картинки залитые в вордпресс для шаблона.
+Шаблон выполнен на cms Wordpress. С применением Bootstrap 4, jquery 3.. Сделана адаптивная верстка согласно шаблону под мобильные, планшет и мониторов. На страницах блога применена технология асинхронной загрузки данных ([AJAX](https://ru.wikipedia.org/wiki/AJAX)).
 
-###  Тесты    
+В директориии **model_database** лежит скриншоты дизайна и база данных. А также картинки залитые в вордпресс для шаблона.
+
+## Стек технологий примененный при разработке шаблона.
+
+*   cms Wordpress
+*   jQuery
+*   [Masonry](https://masonry.desandro.com/)
+*   Bootstrap 4
+*   Sass
+*   ES5
+*   google maps api
+
+## Тесты    
 
 Протестировано на следующих браузерах. Указаны версии где шаблон работает без ограничений.
-##### Desktop 
+### Desktop 
 |   IE  |   Edge    |   Firefox |   Chrome  |   Safari  | Opera |
 |-------|-----------|-----------|-----------|-----------|-------|
 |   11  |     -     |   45.0    |   46.0    |   -       |   20  |
 |   -   |     -     |   66.0    |   74.0    |   -       |   20  |
 
-##### Mobile 
+### Mobile 
 |   IOS Safari | Opera Mobile | Android Browser | Chrome for Android | Firefox for android  | 
 |--------------|--------------|-----------------|--------------------|----------------------|
 |              |     53.3     |                 |         72.0       |          65.0        | 
 
-###  Валидация    
+##  Валидация    
 Валидацию проходит.    
 Есть некоторые замечания. Ошибок нет.
 
 
-### Tест скорости    
+## Tест скорости    
 [https://developers.google.com/speed/](https://developers.google.com/speed/)
 
 |    Для компьютеров                             |     ***97%***|
@@ -47,13 +59,13 @@
 
 
 
-###     Скриншоты шаблона
+##     Скриншоты шаблона
 
 ### Главная страница 
-![](///model_database/main.gif)
+![](model_database/main.gif)
 
 ### Страница Work
-![](//model_database/work.gif)
+![](model_database/work.gif)
 
 ### Страница Contact
-![](//model_database/contact.gif)
+![](model_database/contact.gif)
