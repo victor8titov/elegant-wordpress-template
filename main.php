@@ -183,7 +183,7 @@ get_header();
                 
             </section>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-12 col-sm-6 p-0">
                 <section class="main-contact-location text-center">
                     <h4>Location</h4>
                     
@@ -192,7 +192,7 @@ get_header();
                     <?php endforeach; ?>        
             </section>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-12 col-sm-6 p-0">
                 <section class="main-contact-phone text-center">
                     <h4>Phone</h4>
                     <?php foreach( $contact['phone'] as $address): ?>
@@ -200,7 +200,7 @@ get_header();
                     <?php endforeach; ?>        
             </section>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-12 col-sm-6 p-0">
                 <section class="main-contact-fax text-center">
                     <h4>Fax</h4>
                     <?php foreach( $contact['fax'] as $address): ?>
@@ -208,7 +208,7 @@ get_header();
                     <?php endforeach; ?>        
             </section>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-12 col-sm-6 p-0">
                 <section class="main-contact-email text-center">
                     <h4>EMAIL</h4>
                     <?php foreach( $contact['email'] as $address): ?>

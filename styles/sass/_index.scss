@@ -1,4 +1,5 @@
 .main {
+    
     .main-loop {
         
     }
@@ -105,6 +106,19 @@
             padding-bottom: 150px;
         }
         
+    }
+    @media (max-width: 576px) {
+        .last-post {
+                h5,h4,p,a {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+        }
+        &-contact {
+            &-location, &-phone, &-fax, &-email {
+                padding-bottom: 80px;
+            }   
+        }
     }
     @media (min-width: 768px) {
         .about {

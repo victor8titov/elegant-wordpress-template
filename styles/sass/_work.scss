@@ -109,4 +109,14 @@
 
 
     }
+    @media (max-width:576px) {
+        .more-content {
+            .box-picture {
+            
+                #thumbnail {
+                    height: 200px;
+                }
+            }
+        }
+    }
 }
