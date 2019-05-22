@@ -8,13 +8,13 @@
 
 ## Стек технологий примененный при разработке шаблона.
 
-*   cms Wordpress
-*   jQuery
+*   [ECMAScript 5](http://es5.github.io/)
+*   [jQuery](https://jquery-docs.ru/)
+*   [Bootstrap 4](https://bootstrap-4.ru)
+*   [Sass](https://sass-scss.ru/guide/)
 *   [Masonry](https://masonry.desandro.com/)
-*   Bootstrap 4
-*   Sass
-*   ES5
-*   google maps api
+*   [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial)
+*   [Wordpress](https://ru.wordpress.org/)
 
 ## Тесты    
 
